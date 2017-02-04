@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "target": "es5",
+    "module": "commonjs",
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "lib": [
+      "es2015",
+      "es2016"
+    ],
+    "outDir": "./dist",
+    "declaration": true,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "strictNullChecks": true,
+    "types": [
+      "node",
+      "bluebird"
+    ]
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}
