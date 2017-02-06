@@ -16,6 +16,7 @@ export class Application {
 
 	main() {
 		if (this.options.isValid() === false) {
+			this.logger.error("Invalid options", null);
 			throw new Error("Invalid options");
 		}
 
@@ -31,7 +32,8 @@ export class Application {
 				this.logger.flush();
 			})
 			.catch(err => {
-				throw Error(err);
+				this.logger.error(err.toString(), null);
+				this.logger.flush();
 			});
 	}
 

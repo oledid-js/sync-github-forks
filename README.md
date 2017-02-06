@@ -20,6 +20,7 @@
 1. Pull all tags from upstream and prune tags (remove tags that are removed from upstream)
 1. Push all tags to origin
 1. Write log to work-directory/log-yyyy-MM-dd-HH:mm:ss.txt
+1. Write errors (if any) to work-directory/errors-yyyy-MM-dd-HH:mm:ss.txt
 1. Exit
 
 

@@ -31,7 +31,8 @@ export class GitService {
 			], opts)
 				.catch(err => {
 					if (!err.toString().match(/No such remote: upstream/)) {
-						throw new Error(err);
+						this.logger.error(err.toString(), fullname);
+						reject(err);
 					}
 				})
 				.then(() => {
@@ -57,13 +58,14 @@ export class GitService {
 				cwd: path.join(this.options.directoryPath, name)
 			};
 			this.logger.log("Checking out " + branch, fullname);
-			return execa("git", [
+			execa("git", [
 				"checkout",
 				branch
 			], opts)
 				.catch(err => {
 					if (!err.toString().match(/A branch named '(.*)' already exists/)) {
-						throw new Error(err);
+						this.logger.error(err.toString(), fullname);
+						reject(err);
 					}
 				})
 				.then(() => {
@@ -73,6 +75,15 @@ export class GitService {
 						"upstream",
 						branch
 					], opts);
+				})
+				.catch(err => {
+					if (err.toString().match(/fatal: refusing to merge unrelated histories/)) {
+						reject(`Branch '${branch}' of [${fullname}] has been force pushed. The repository will be ignored awaiting manual merge. Error: ${err}`);
+					}
+					else {
+						this.logger.error(err, fullname);
+						reject(err);
+					}
 				})
 				.then(() => {
 					resolve();
