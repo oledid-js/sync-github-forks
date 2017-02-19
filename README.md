@@ -1,4 +1,4 @@
-# sync-github-forks-cli
+# sync-github-forks-cli [![Build Status](https://travis-ci.org/oledid-js/sync-github-forks.svg?branch=master)](https://travis-ci.org/oledid-js/sync-github-forks) [![npm](https://img.shields.io/npm/dt/sync-github-forks.svg)](https://www.npmjs.com/package/sync-github-forks) [![npm](https://img.shields.io/npm/v/sync-github-forks.svg)](https://www.npmjs.com/package/sync-github-forks)
 > Keeps github forks up to date using node, the github api and git.
 
 
@@ -405,7 +405,7 @@ app.main();
 
 
 ## Related:
-* [oledid/sync-github-forks-cli](https://github.com/oledid/sync-github-forks-cli) - CLI for this module
+* [oledid-js/sync-github-forks-cli](https://github.com/oledid-js/sync-github-forks-cli) - CLI for this module
 * [@oledid-forks](https://github.com/oledid-forks) - An organization that uses this to sync its forks every day
 
 

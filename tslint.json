@@ -19,9 +19,9 @@
       true,
       "check-open-brace"
     ],
-    "ordered-imports": false,
-    "trailing-comma": false,
-    "max-classes-per-file": false,
+    "ordered-imports": [false],
+    "trailing-comma": [false],
+    "max-classes-per-file": [false],
     "object-literal-shorthand": false,
     "object-literal-sort-keys": false,
     "variable-name": [
@@ -31,6 +31,7 @@
       "allow-leading-underscore"
     ],
     "class-name": true,
-    "no-var-requires": false
+    "no-var-requires": false,
+    "max-line-length": [false]
   }
 }
