@@ -1,5 +1,5 @@
 # sync-github-forks-cli [![Build Status](https://travis-ci.org/oledid-js/sync-github-forks.svg?branch=master)](https://travis-ci.org/oledid-js/sync-github-forks) [![npm](https://img.shields.io/npm/dt/sync-github-forks.svg)](https://www.npmjs.com/package/sync-github-forks) [![npm](https://img.shields.io/npm/v/sync-github-forks.svg)](https://www.npmjs.com/package/sync-github-forks)
-> Keeps github forks up to date using node, the github api and git.
+Keeps github forks up to date using node, the github api and git.
 
 
 ## Requirements:
