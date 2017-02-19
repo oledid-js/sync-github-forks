@@ -1,14 +1,14 @@
 {
   "name": "sync-github-forks",
-  "version": "0.1.15",
+  "version": "0.1.17",
   "description": "Keep github forks up to date using node, the github api and git",
   "main": "dist/index.js",
   "scripts": {
-    "postinstall": "npm run build",
+    "pretest": "npm run build",
     "build": "tsc --newline lf",
     "test": "npm run lint",
-    "lint": "tslint -t stylish -c ./tslint.json src/**",
-    "prepublish": "in-publish && npm run build && npm run test || not-in-publish"
+    "lint": "tslint -t stylish -c ./tslint.json src/** && tslint -t stylish -c ./jslint.json dist/**/*.js",
+    "prepublish": "in-publish && npm test || not-in-publish"
   },
   "files": [
     "dist"
